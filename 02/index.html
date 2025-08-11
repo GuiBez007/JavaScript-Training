@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Teste JavaScript</h1>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sit, sed, similique facere quisquam laborum suscipit odio adipisci asperiores aperiam recusandae a quae reprehenderit sapiente vitae nulla. Eveniet, labore ea?</span><span>Ipsa, dolorem sit dolorum, a tempore sunt consectetur aperiam amet, dicta iste ullam recusandae perferendis quis ex beatae! Architecto soluta tempore vel aspernatur. Quibusdam, dignissimos sapiente qui sint minus molestiae.</span><span>Vitae iste sunt placeat asperiores pariatur! Perspiciatis perferendis ad ex ea est eius. Itaque corporis in cum, aliquid, illo id fugiat similique rem modi consequatur sed deserunt pariatur blanditiis illum!</span><span>Quasi vel esse quaerat voluptatem laudantium voluptatibus repudiandae id impedit necessitatibus dolorum! Non quia suscipit voluptatibus quis impedit quisquam beatae dolore ullam, consequuntur quae deserunt! Exercitationem blanditiis provident velit veritatis.</span></p>
+    </main>
+    
+    <script>
+        let nome = window.prompt('Informe seu nome:')
+        let num1 = Number(window.prompt('Informe um número:'))
+        let num2 = Number.parseInt(window.prompt('Informe outro número:'))
+
+        window.alert(nome + " digitou 2 números")
+        window.alert(num1 + " e " + num2)
+        window.alert(`que somados dão ${num1 + num2}`)
+
+        document.writeln(`<h2>RESUMO:</h2>`)
+        document.write(`Seu nome "${nome}" possui ${nome.length} letras no total`)
+    </script>
+</body>
+</html>
