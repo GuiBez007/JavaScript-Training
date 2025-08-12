@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 132, 255, 0.753);
+        }
+
+        header, footer {
+            color: white;
+            padding: 10px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
+            text-align: center;
+        } span {
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        main {
+            background-color: white;
+            width: 70vw;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
+            padding: 10px;
+            font-size: 1.3em;
+        }
+
+        .button-field {
+            height: fit-content;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        #isection1 {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 5px;
+            /* border: solid red; */
+        }
+        #isection2 {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #iimg {
+            /* height: 200px;
+            width: 200px; */
+            /* border: solid; */
+            margin: auto;
+            border-radius: 50%;
+            /* background-image: url('Images/'); */
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header><h1>Age verificator</h1></header>
+
+    <main>
+        <section id="isection1">
+            <div>
+                <label for="iage">Year of birth: </label>
+                <input class="button-field" type="number" name="year" id="iyear" value="2007" min="1900" max="2025">
+            </div>
+
+            <div>
+                Gender:
+                <input type="radio" name="gender" id="igenderm" value="Male">
+                <label for="igenderm">Male</label>
+                <input type="radio" name="gender" id="igenderf" value="Female">
+                <label for="igenderf">Female</label>
+            </div>
+
+            <input class="button-field" type="button" value="Verify" onclick="verification()">
+        </section>
+
+        <section id="isection2">
+            <p>Inform about yourself first to see the information</p>
+            <div id="iimg"></div>
+        </section>
+    </main>
+
+    <footer>Made by <span>Guilherme Bezerra</span></footer>
+
+
+    <script>
+        let result = window.document.getElementsByTagName('p')[0]
+        let gender = null
+        let img = window.document.getElementById('iimg')
+        let today_year = new Date().getFullYear()
+
+        function verification() {
+            gender = window.document.querySelector('input[name="gender"]:checked')
+            if (gender === null)
+                window.alert('Inform your data first!')
+            else
+                calcular()
+        }
+
+        function calcular(){
+            gender = window.document.querySelector('input[name="gender"]:checked')
+            gender = gender.value
+            let year = window.document.getElementById('iyear')
+            let age = today_year - year.value
+            
+            // Shows the result
+            result.innerText = `I'm ${gender} and I'm ${age} years old` 
+
+            // Images load
+            img.style.height = "200px";
+            img.style.width = "200px";
+
+            if (age < 18) {
+                if (gender === "Male")
+                    img.style.backgroundImage = "url('Images/boy.png')"
+                else
+                    img.style.backgroundImage = "url('Images/girl.png')"
+            } else {
+                if (gender === "Female")
+                    img.style.backgroundImage = "url('Images/woman.png')"
+                else
+                    img.style.backgroundImage = "url('Images/man.png')"
+            }
+        }
+    </script>
+</body>
+</html>

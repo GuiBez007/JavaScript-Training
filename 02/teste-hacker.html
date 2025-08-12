@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        main {
+            border: 1px solid;
+            width: 500px;
+            font-size: 1.3em;
+            padding: 10px;
+        }
+        main > #div-flex {
+            display: flex;
+            flex-flow: row wrap;
+            /* border: solid red; */
+
+        } main > div > .elementos {
+            flex: 1 1 200px
+        } 
+
+        input {
+            height: 50px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        #botao {
+            order: 1;
+        }
+
+        #exibir-pagina {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(0, 174, 255);
+            color: white;
+            font-size: 1.2em;
+            transition-duration: 0.5s ;
+        } #exibir-pagina:hover {
+            text-decoration: underline;
+            color: black;
+            cursor: pointer;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="button" value="Clique aqui para carregar a página" id="exibir-pagina">
+    </main>
+
+    <script>
+        let exibir = window.document.getElementById('exibir-pagina')
+        let btnSoma = null
+        let txtResultado = null
+        let num1 = null
+        let num2 = null
+        exibir.addEventListener('click', carregarPagina)
+        
+        function carregarPagina() {
+            let main = window.document.getElementsByTagName('main')[0]
+            main.innerHTML = `
+                <h1>Teste de Inputs e Outputs</h1>
+                <div id="div-flex">
+                    <input class="elementos" type="number" name="num1" id="inum1">
+                    <input class="elementos" type="number" name="num2" id="inum2">
+                    <input class="elementos" type="button" id="botao" value="Somar">
+                    <div class="elementos" id="iResultado">O resultado é: </div>
+                </div>
+            `
+
+            btnSoma = window.document.getElementById('botao')
+            txtResultado = window.document.getElementById('iResultado')
+            num1 = window.document.getElementById('inum1')
+            num2 = window.document.getElementById('inum2')
+            
+            btnSoma.addEventListener('click', somar)
+        }
+        
+        function somar() {
+            txtResultado.innerText = 'O resultado é: '
+            num1 = Number(inum1.value)
+            num2 = Number(inum2.value)
+
+            txtResultado.innerHTML = `${txtResultado.innerText} + ${num1 + num2}`
+            // txtResultado.innerHTML = `${txtResultado.innerText} teste`
+        }
+    </script>
+</body>
+</html>
