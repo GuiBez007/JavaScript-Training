@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header><h1>Lets Count</h1></header>
+
+    <main>
+        <section>
+            <div id="main-div">
+                <div>
+                    <label for="ibegin">Initial number </label>
+                    <label for="iend">Final number</label>
+                    <label for="istep">Number of steps</label>
+                </div>
+                
+                <div>
+                    <input type="number" name="begin" id="ibegin">
+                    <input type="number" name="end" id="iend">
+                    <input type="number" name="step" id="istep">
+                </div>
+                
+                <div style="display: block; width: 454px; margin: auto;">
+                    <input style="width: 100%;" type="button" name="send" id="isend" value="Send">
+                </div>
+            </div>
+
+            <!-- SHOW THE RESULT -->
+            <div id="iresult" style="text-align: start;">Preparing the count...</div>
+        </section>
+    </main>
+
+    <footer>made by <span>Guilherme Bezerra</span></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

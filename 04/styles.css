@@ -1,0 +1,55 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+header, footer {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+}
+header {
+    padding: 20px;
+}
+footer {
+    padding: 10px;
+    font-size: 1.2em;
+} footer > span {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+main {
+    width: 60vw;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+    text-align: center;
+} section > p {
+    padding: 15px;
+    font-size: 1.2em;
+} section > #iimg {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.541);
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
