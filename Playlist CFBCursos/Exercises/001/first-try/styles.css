@@ -1,0 +1,55 @@
+
+body {
+    margin: auto;
+    width: fit-content;
+    font-size: 1.5em;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+main > div {
+    border: solid;
+    height: 500px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.055);
+    box-shadow: 0px 0px 2px black;
+} 
+
+main > div:nth-child(odd) > div {
+    padding: 10px;
+    margin: 10px;
+    border: solid red;
+    text-align: center;
+} main > div:nth-child(odd) > div:hover {
+    background-color: aqua;
+}
+
+main > div:nth-child(even) {
+    height: fit-content;
+    width: max-content;
+    padding: 10px;
+    font-size: 1.5em;
+    box-shadow: none;
+}
+main > div:nth-child(even) > div {
+    height: fit-content;
+    padding: 10px;
+    font-size: 1.5em;
+    box-shadow: none;
+} main > div:nth-child(even) > div:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    box-shadow: 0px 0px 2px black;
+    cursor: pointer;
+    /* padding: 5px; */
+}
+
+.sumir {
+    display: none;
+}
