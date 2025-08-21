@@ -1,0 +1,36 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    padding: 10px;
+    box-shadow: 0px 0px 4px black;
+    margin: 10px;
+} 
+input {
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.185);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-indent: 5px;
+} body, label, input, main > div {
+    font-size: 1.2em;
+}
+
+#button {
+    background-color: rgba(0, 0, 0, 0.562);
+} #button:hover {
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    text-decoration: underline;
+    box-shadow: 0px 0px 4px black;
+    cursor: pointer;
+}
